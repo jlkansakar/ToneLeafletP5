@@ -15,13 +15,11 @@ L.circle([56.8033777, 9.5168986]).addTo(map);
 
 
 
-}
+
 ufoSightingArray.forEach(function(sighting) {
     const latlngIndividual = sighting["lat, lng"]
     const latlngIndividualArray = latlngIndividual.split(", ")
     const lat = parseFloat(latlngIndividualArray[0])
     const lng = parseFloat(latlngIndividualArray[1])
-    console.log(lat)
-
-
+    L.marker([lat, lng]).addTo(map);
 });
